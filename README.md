@@ -23,7 +23,7 @@ The libraries used are:
   My introduction to raycasting and graphics programming in general was with [ssloy's](https://github.com/ssloy) [tinyracaster project](https://github.com/ssloy/tinyraycaster). I like the simple approach he takes to graphics and resultingly, there will exist some similarities in the backbones of our code (display methods, framebuffers, etc.), so be sure to check out his great projects for a more in-depth explanation of some of the methods used.
   
 ## Bugs: 
-  It is important to note that I am one individual, at the time of this engine's creation, just beginning graphics programming in c++. There are bugs in my code. A known one is that walls with unreal and 0 slopes do not render correctly. I do not plan to work any more on this project in significant ways. I have accomplished what I wanted and want to share my take on non-orthogonal raycasting. It is not entirely well-optimized. The code was designed with simplicity in mind. I suggest compiling with g++ and the -o3 optimization flag for good performance.
+  It is important to note that I am one individual just beginning graphics programming in c++ at the time of this engine's creation. There are bugs in my code. A known one is that walls with unreal and 0 slopes do not render correctly. I do not plan to work any more on this project in significant ways. I have accomplished what I wanted and want to share my take on non-orthogonal raycasting. It is not entirely well-optimized. The code was designed with simplicity in mind. I suggest compiling with g++ and the -o3 optimization flag for good performance.
   
 
 
