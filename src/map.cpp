@@ -28,7 +28,7 @@ Map::Map(uint32_t sky, uint32_t ground, float light, size_t imgWidth, size_t img
 
 	// dimensioning
 	rectWidth = (imgWidth / 6) / w; // map width is 1/6 that of the screen
-        rectHeight = rectWidth;
+    rectHeight = rectWidth;
 
 	mapX = imgWidth - w * rectWidth;
 	mapY = imgHeight - h * rectHeight;

@@ -90,43 +90,6 @@ void drawScene(Map &map, Display &frame, Player &player) {
 				frame.drawPixel(i, j, packColor(r * shade, g * shade, b * shade));
 			}
 		}
-
-		/*for (int j = 0; j < std::max(0, wallTop); j++) { // branchless, but has some redundancy 
-			frame.drawPixel(i, j, map.skyColor); 
-		}
-		for (int j = std::max(0, wallTop); j < std::min((int)frame.h, wallBottom); j++) {
-			uint8_t r, g, b, a;
-			unpackColor(wallColor, r, g, b, a);
-
-			float shade = std::fmin(1, map.brightness / dist);
-			frame.drawPixel(i, j, packColor(r * shade, g * shade, b * shade));
-		}
-		for (int j = std::min((int)frame.h, wallBottom); j < frame.h; j++) {
-			float shade = std::fmax(0, 1 - map.brightness / float(j - horizon));
-            frame.drawPixel(i, j, packColor(map.groundR * shade, map.groundG * shade, map.groundB * shade));
-		}*/
-
-		/*for (int j = 0; j < frame.h; j++) { // completely branchless but VERY poorly programmed
-
-			uint32_t color = (j < wallTop) * map.skyColor + (wallTop <= j && j <= wallBottom) * wallColor + (j > wallBottom) * map.groundColor; // which color to use
-			
-			float shade = (j > wallBottom) * std::fmax(0, 1 - map.brightness / float(j - horizon)) + (wallTop <= j && j <= wallBottom) * std::fmin(1, map.brightness / dist) + (j < wallTop); // which shading to use
-			
-			uint8_t r, g, b, a; 
-			unpackColor(color, r, g, b, a); // unpack chosen color
-
-			frame.drawPixel(i, j, packColor(r * shade, g * shade, b * shade)); // modify color and draw
-		}*/
-
-		/*if (map.shown == 1) { // draw rays and intersections on map - commented because this is very expensive
-			int mapX = map.mapX + rayX * map.rectWidth; 
-			int mapY = map.mapY + rayY * map.rectHeight;
-			frame.drawLine(map.mapX + player.x * map.rectWidth, map.mapY + player.y * map.rectHeight, mapX, mapY, packColor(255, 0, 0)); // draw player's fov
-		}*/
 	}
 	return;
-}
-
-void render(Map& map, Display& frame, Player& p) {
-	drawScene(map, frame, p);
 }

@@ -9,9 +9,8 @@
 #include "player.h"
 #include "display.h"
 #include "renderFrame.h"
-#include "textures.h"
 #include "map.h"
-#include "SDL/include/SDL2/SDL.h"
+#include "SDL2-2.0.18\include\SDL.h"
 
 struct GameState {
 

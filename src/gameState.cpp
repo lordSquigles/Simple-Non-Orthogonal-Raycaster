@@ -1,6 +1,7 @@
 #include <vector>
 #include <cassert>
 #include <iostream>
+#include <string>
 
 #include "gameState.h"
 #include "util.h"
@@ -64,7 +65,6 @@ void GameState::handleInput(SDL_Event& event) {
 				case SDLK_d: sideways = -1; break;
 				case SDLK_m: map.shown = (map.shown == 0) ? 1 : 0; break; // toggle map
 				case SDLK_p: pause = 1; break; // "p" key toggles the pause bool
-				case SDLK_BACKQUOTE: consoleOpen = 1; break;
 				case SDLK_SLASH: stats = (stats == 0) ? 1 : 0; break; // toggle stats
 				default: break;
 			}
