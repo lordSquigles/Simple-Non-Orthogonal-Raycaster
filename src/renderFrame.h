@@ -7,6 +7,6 @@
 #include "display.h"
 #include "map.h"
 
-void render(Map& map, Display& frame, Player& p);
+void drawScene(Map& map, Display& frame, Player& p);
 
 #endif
