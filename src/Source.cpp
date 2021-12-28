@@ -64,7 +64,6 @@ int main() {
     GameState gs{frame, map, Player(4.f, 4.f, 0.f, M_PI / 2.f, imgWidth * (M_PI / 6.f) / 1024), courier, window, renderer, frameTexture, 0};
 
     uint32_t lastTime = 0;
-    uint32_t lastFPSDisplay = 0;
     uint8_t fps;
     std::vector<uint8_t> fpsLog;
     uint8_t avgFps;
@@ -73,13 +72,9 @@ int main() {
 
         float dt = (SDL_GetTicks() - lastTime) / 1000.0;
         lastTime = SDL_GetTicks();
+		
         if (dt <= 0) dt = 1; //prevent division by zero
-
-        //called five times per second
-        if(lastFPSDisplay + 200 < lastTime) {
-            lastFPSDisplay = lastTime;
-        }
-
+      
         fps = 1 / dt;
 
         fpsLog.push_back(fps);
