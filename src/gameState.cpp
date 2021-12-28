@@ -26,7 +26,7 @@ void GameState::update(SDL_Event& event, int fps) {
 
 	if (pause == 0) {
 		movSpeed = (150.f / fps); // set movement speed to be constant regardless of framerate
-		render(map, frame, player);
+		drawScene(map, frame, player);
 
 		if (map.shown == 1) { // draw map
 			frame.drawMap(map.mapX, map.mapY, map, player);
