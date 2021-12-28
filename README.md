@@ -1,4 +1,4 @@
-# Simple-Non-Othogonal-Raycaster
+# Simple-Non-Orthogonal-Raycaster
 An incredibly simple, non-orthogonal raycaster engine in C++
 
 ![raycastDemo](./raycastDemo.gif)
